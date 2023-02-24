@@ -70,7 +70,7 @@ void plotRow(cv::Mat &image, std::vector<uchar> row_colors, int y, float scale, 
 int main(int argc, char **argv) {
     info();
     // Create a capture object from device number (or video filename)
-    cv::VideoCapture cap("/home/pedro/projects/LineFollower/line.mp4");
+    cv::VideoCapture cap(0);
     // Check if any error happened
     if(!cap.isOpened()) {
         std::cout << "Ops, capture cannot be created!" << std::endl;
@@ -136,7 +136,7 @@ int main(int argc, char **argv) {
             s.push_back( hsvpixel[1] );
             v.push_back( hsvpixel[2] );
 
-            //std::cout << x <<":"<<(int)hsvpixel[1]<<std::endl;
+            
         
         }
         // clone image and keep the orginal for processing!
